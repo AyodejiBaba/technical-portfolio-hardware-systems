@@ -1,8 +1,5 @@
-# 07 – Hardware Debug Case Studies
+## Hardware Debug Case Studies
 
-This section contains structured real-world debug investigations including:
-
-- PCB bring-up failures
-- Power sequencing issues
-- Board won’t power on cases
-- Root cause analysis reports
+- Post-Silicon Frequency Drift Under Thermal Stress
+- PCB Bring-Up – 3.3V Rail Instability
+- Board Will Not Power – VIN Short Isolation
