@@ -22,6 +22,8 @@ During initial bring-up of a newly assembled mixed-signal PCB, the 3.3V regulato
 
 ## 2. Test Setup
 
+![3.3V rail bring-up](fig_3v3_rail.svg)
+
 ### Equipment
 
 - Bench DC power supply (12V input)  

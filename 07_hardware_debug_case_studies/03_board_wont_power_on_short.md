@@ -21,6 +21,8 @@ A new board revision failed to power on; applying 12V from a bench supply caused
 
 ## 2. Test Setup
 
+![VIN short isolation flow](fig_vin_short_flow.svg)
+
 ### Equipment
 
 - Bench DC power supply (set to 12V with current limit)  
