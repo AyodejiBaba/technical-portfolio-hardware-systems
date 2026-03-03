@@ -81,3 +81,6 @@ An input MLCC capacitor was internally shorted, most likely caused by PCB flex s
 ## Engineering Takeaway
 
 When a board fails to power on with immediate current draw, systematic resistance testing and thermal anomaly detection can isolate shorts quickly and prevent cross-component damage.
+### If repeated in production:
+- Introduce low-voltage short detection at ICT prior to full VIN application.
+- Specify soft-termination MLCCs to reduce flex-induced fracture risk.

@@ -98,3 +98,6 @@ Contributing factors:
 ## Engineering Takeaway
 
 During initial hardware bring-up, isolating power rails from downstream loads and methodical component inspection are critical steps for rapid root cause discovery.
+### If repeated in production:
+- Add ICT resistance-to-ground screening on 3V3 rail prior to first power-on.
+- Tighten AOI inspection criteria on fine-pitch MCU pads.

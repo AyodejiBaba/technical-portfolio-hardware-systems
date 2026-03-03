@@ -112,4 +112,5 @@ Thermally induced drift in internal biasing combined with marginal supply noise 
 ## Engineering Takeaway
 Early structured corner testing and disciplined isolation prevented a latent reliability risk from propagating into high-volume production.
 ### If repeated in production:
-- I would implement X test coverage at incoming inspection level.
+- Add extended HTOL soak at Vmin with automated frequency drift monitoring.
+- Introduce dynamic supply ripple injection as part of corner validation screening.
