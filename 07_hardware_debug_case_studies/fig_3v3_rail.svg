@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="220">
+  <rect x="30" y="85" width="110" height="50" fill="none" stroke="black" stroke-width="2"/>
+  <text x="55" y="115" font-family="Arial" font-size="14">12V IN</text>
+
+  <rect x="190" y="85" width="140" height="50" fill="none" stroke="black" stroke-width="2"/>
+  <text x="210" y="115" font-family="Arial" font-size="14">5V Pre-Reg</text>
+
+  <rect x="380" y="85" width="140" height="50" fill="none" stroke="black" stroke-width="2"/>
+  <text x="405" y="115" font-family="Arial" font-size="14">3.3V LDO</text>
+
+  <rect x="570" y="85" width="140" height="50" fill="none" stroke="black" stroke-width="2"/>
+  <text x="595" y="115" font-family="Arial" font-size="14">3V3_NET</text>
+
+  <rect x="760" y="70" width="180" height="80" fill="none" stroke="black" stroke-width="2"/>
+  <text x="790" y="105" font-family="Arial" font-size="14">MCU +</text>
+  <text x="790" y="125" font-family="Arial" font-size="14">Peripherals</text>
+
+  <line x1="140" y1="110" x2="190" y2="110" stroke="black" stroke-width="2"/>
+  <line x1="330" y1="110" x2="380" y2="110" stroke="black" stroke-width="2"/>
+  <line x1="520" y1="110" x2="570" y2="110" stroke="black" stroke-width="2"/>
+  <line x1="710" y1="110" x2="760" y2="110" stroke="black" stroke-width="2"/>
+
+  <line x1="450" y1="85" x2="450" y2="35" stroke="black" stroke-width="2"/>
+  <rect x="380" y="10" width="140" height="35" fill="none" stroke="black" stroke-width="2"/>
+  <text x="405" y="32" font-family="Arial" font-size="13">Scope: ripple</text>
+
+  <line x1="640" y1="135" x2="640" y2="190" stroke="black" stroke-width="2" stroke-dasharray="6,5"/>
+  <text x="520" y="210" font-family="Arial" font-size="12">Isolation step: disconnect loads → LDO stabilizes</text>
+</svg>

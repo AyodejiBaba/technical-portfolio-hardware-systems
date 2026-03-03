@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="300">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="black"/>
+    </marker>
+  </defs>
+
+  <rect x="30" y="30" width="210" height="45" fill="none" stroke="black" stroke-width="2"/>
+  <text x="55" y="58" font-family="Arial" font-size="13">Board won’t power on</text>
+
+  <rect x="280" y="30" width="260" height="45" fill="none" stroke="black" stroke-width="2"/>
+  <text x="295" y="58" font-family="Arial" font-size="13">Measure VIN–GND resistance (OFF)</text>
+
+  <rect x="580" y="30" width="210" height="45" fill="none" stroke="black" stroke-width="2"/>
+  <text x="610" y="58" font-family="Arial" font-size="13">Low Ω → Short</text>
+
+  <rect x="30" y="120" width="260" height="55" fill="none" stroke="black" stroke-width="2"/>
+  <text x="45" y="148" font-family="Arial" font-size="13">Inject 1V current-limited</text>
+  <text x="45" y="166" font-family="Arial" font-size="13">(avoid damage)</text>
+
+  <rect x="330" y="120" width="260" height="55" fill="none" stroke="black" stroke-width="2"/>
+  <text x="345" y="148" font-family="Arial" font-size="13">Find hotspot (thermal / IPA)</text>
+
+  <rect x="630" y="120" width="300" height="55" fill="none" stroke="black" stroke-width="2"/>
+  <text x="645" y="148" font-family="Arial" font-size="13">Remove/replace suspect part (MLCC)</text>
+
+  <rect x="30" y="220" width="300" height="55" fill="none" stroke="black" stroke-width="2"/>
+  <text x="45" y="248" font-family="Arial" font-size="13">Resistance rises → short isolated</text>
+
+  <rect x="380" y="220" width="300" height="55" fill="none" stroke="black" stroke-width="2"/>
+  <text x="395" y="248" font-family="Arial" font-size="13">Verify rails → confirm boot (UART)</text>
+
+  <line x1="240" y1="52" x2="280" y2="52" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="540" y1="52" x2="580" y2="52" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="685" y1="75" x2="160" y2="120" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="290" y1="148" x2="330" y2="148" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="590" y1="148" x2="630" y2="148" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="780" y1="175" x2="180" y2="220" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="330" y1="248" x2="380" y2="248" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>
