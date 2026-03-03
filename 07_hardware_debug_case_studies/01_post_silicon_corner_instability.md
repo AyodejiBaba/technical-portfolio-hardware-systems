@@ -23,6 +23,20 @@ The issue appeared only under specific voltage and temperature combinations and 
 
 ## 2. Test Setup
 
+            ┌───────────────────────────────┐
+            │   Environmental Chamber        │
+            │   (-40°C → 125°C sweep)        │
+            │                               │
+ PSU (V) ───┼──> DUT Board / Socket ──CLK───┼──> Frequency Counter (ppm)
+ (±10%)     │          │                    │
+            │          └── probe points      │
+            │                 │              │
+            └─────────────────┼──────────────┘
+                              │
+                              └── Oscilloscope (waveform / ripple)
+                                  
+Python Logger: timestamps + T + V + Freq + notes → CSV/plots
+
 ### Equipment
 
 - Environmental chamber (–40°C to 125°C sweep)  
