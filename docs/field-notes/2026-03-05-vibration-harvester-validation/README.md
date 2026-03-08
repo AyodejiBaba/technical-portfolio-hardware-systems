@@ -1,5 +1,19 @@
 # Vibration Harvester Validation Update
 
+## Results Snapshot
+
+Key experimental outcome from the vibration harvester validation tests.
+
+| Device | Frequency | Test Duration | Peak Voltage |
+|------|------|------|------|
+WaveHarvester | 50 Hz | 6 minutes | ~3.05 V |
+Double Cantilever | 25 Hz | 6 minutes | ~0.247 V |
+Double Cantilever | 50 Hz | 6 minutes | ~0.022 V |
+
+These results show that the **WaveHarvester behaves as a broadband energy harvester**, while the **cantilever architecture is highly frequency-selective**.
+
+The WaveHarvester demonstrated significantly stronger energy accumulation under typical industrial vibration conditions (~50 Hz).
+
 ## Overview
 
 This update documents controlled shaker tests comparing the WaveHarvester architecture against double-cantilever harvesters.
@@ -12,7 +26,10 @@ This update documents controlled shaker tests comparing the WaveHarvester archit
 - Electrical load: 22 kΩ resistor across the capacitor
 - Logging: ESP32 ADC telemetry
 
-See `plots/test_setup_diagram.png`.
+The experimental setup used a vibration shaker with rigid cyanoacrylate coupling
+between the shaker surface and the energy harvesting device.
+
+![Test setup diagram](plots/test_setup_diagram.png)
 
 ## Key findings
 
@@ -33,11 +50,23 @@ See `data/summary_results.csv` and `plots/peak_voltage_comparison.png`.
 
 ## Generated plots
 
-- `plots/waveharvester_frequency_comparison.png`
-- `plots/cantilever_frequency_comparison.png`
-- `plots/long_duration_accumulation_comparison.png`
-- `plots/peak_voltage_comparison.png`
-- `plots/test_setup_diagram.png`
+## Experimental Plots
+
+### WaveHarvester frequency comparison
+
+![WaveHarvester frequency comparison](plots/waveharvester_frequency_comparison.png)
+
+### Cantilever frequency comparison
+
+![Cantilever frequency comparison](plots/cantilever_frequency_comparison.png)
+
+### Long duration accumulation
+
+![Long duration comparison](plots/long_duration_accumulation_comparison.png)
+
+### Peak voltage comparison
+
+![Peak voltage comparison](plots/peak_voltage_comparison.png)
 
 ## Interpretation
 
@@ -54,15 +83,14 @@ The experiments show a clear architecture trade-off:
 
 ## Raw Measurement Data
 
-The full experimental dataset, including all test runs and intermediate calculations,
-is available in the Google Sheets workbook below.
+Full experimental data and intermediate calculations are available here:
 
-Google Sheets:
+📊 Google Sheets (raw measurements)  
 https://docs.google.com/spreadsheets/d/1gCekP5nfxt22zZ_sTUwfDKp3-2Z2egHInZx5xVwocbY/edit?usp=sharing
 
-The sheet contains multiple tabs for:
+The workbook includes:
 
-- WaveHarvester tests (25 Hz, 50 Hz, 60 Hz)
-- Double cantilever tests
-- Long-duration accumulation tests
+- WaveHarvester frequency tests
+- Cantilever frequency tests
+- Long duration accumulation tests
 - Plot preparation tables
