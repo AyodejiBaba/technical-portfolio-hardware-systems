@@ -58,7 +58,7 @@ The full experimental dataset, including all test runs and intermediate calculat
 is available in the Google Sheets workbook below.
 
 Google Sheets:
-https://docs.google.com/spreadsheets/d/PASTE_LINK_HERE
+https://docs.google.com/spreadsheets/d/1gCekP5nfxt22zZ_sTUwfDKp3-2Z2egHInZx5xVwocbY/edit?usp=sharing
 
 The sheet contains multiple tabs for:
 
