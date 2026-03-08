@@ -1,91 +1,53 @@
-# Vibration Energy Harvesting Validation – WaveHarvester
+# Vibration Harvester Validation Update
 
-Date: 5 March 2026  
-Location: Lab setup with vibration shaker
+## Overview
 
-## Objective
+This update documents controlled shaker tests comparing the WaveHarvester architecture against double-cantilever harvesters.
 
-Validate the electrical output of the WaveHarvester device under controlled vibration frequencies and quantify capacitor charging behavior.
+## Test setup
 
-The goal was to confirm energy accumulation capability prior to building a USB-powered demo.
+- Shaker excitation frequencies: 25 Hz, 50 Hz, 60 Hz
+- Typical shaker amplitude: ~75–80%
+- Electrical storage: 470 µF capacitor
+- Electrical load: 22 kΩ resistor across the capacitor
+- Logging: ESP32 ADC telemetry
 
----
+See `plots/test_setup_diagram.png`.
 
-## Test Setup
+## Key findings
 
-Device: WaveHarvester prototype  
-Mounting: Rigid cyanoacrylate coupling to shaker surface  
-Capacitor: 470 µF  
-Load resistor: 22 kΩ across capacitor terminals  
-Measurement: ESP32 ADC logging capacitor voltage
+### WaveHarvester
+- Best short-run response was observed around **50 Hz**
+- A 6-minute run at 50 Hz reached **~3.05 V**
+- The WaveHarvester behaved as a **broadband harvester** with meaningful output at 25 Hz, 50 Hz, and 60 Hz
 
-Test frequencies explored:
+### Double cantilever
+- The larger cantilever showed its strongest response near **25 Hz**
+- A 6-minute run at 25 Hz reached **~0.247 V**
+- At 50 Hz and 60 Hz, cantilever output remained very small, confirming **narrowband resonant behavior**
+- The smaller double cantilever also showed sensitivity to mounting and frequency, but still underperformed the WaveHarvester in the tested range
 
-- 25 Hz
-- 50 Hz
-- 60 Hz
+## Peak voltage summary
 
----
+See `data/summary_results.csv` and `plots/peak_voltage_comparison.png`.
 
-## Key Result (50 Hz – 6 minute run)
+## Generated plots
 
-The device was excited at:
+- `plots/waveharvester_frequency_comparison.png`
+- `plots/cantilever_frequency_comparison.png`
+- `plots/long_duration_accumulation_comparison.png`
+- `plots/peak_voltage_comparison.png`
+- `plots/test_setup_diagram.png`
 
-Frequency: 50 Hz  
-Amplitude: ~75–80% shaker output  
-Duration: ~6 minutes
+## Interpretation
 
-Peak capacitor voltage reached:
+The experiments show a clear architecture trade-off:
 
-**3.05 V**
+- **WaveHarvester**: better broadband response, better suited to variable industrial vibration environments
+- **Double cantilever**: narrower resonant response, better only when matched closely to a specific excitation band
 
-This corresponds to approximately:
+## Suggested next updates
 
-**2.2 mJ of stored energy**
-
-(using E = ½ C V² with C = 470 µF)
-
----
-
-## Observed Charging Behavior
-
-The charging curve showed three phases:
-
-1. Rapid initial rise (0 → ~0.8 V)
-2. Stable energy accumulation
-3. Gradual plateau approaching ~3 V
-
-The presence of a 22 kΩ load resistor created continuous discharge current, confirming the harvester could supply energy under load.
-
----
-
-## Preliminary Interpretation
-
-The device shows strongest harvesting near **50 Hz**, suggesting a mechanical resonance band close to this frequency.
-
-Peak voltages observed in earlier tests:
-
-| Frequency | Peak Voltage |
-|----------|--------------|
-| 25 Hz | ~0.88 V |
-| 50 Hz | ~3.05 V |
-| 60 Hz | ~0.50 V |
-
-This indicates the system behaves as a **resonant vibration energy harvester**.
-
----
-
-## Next Steps
-
-1. Compare with cantilever harvester architecture
-2. Measure vibration acceleration using accelerometer
-3. Build energy storage + boost converter chain
-4. Demonstrate USB charging from vibration source
-
----
-
-## Notes
-
-Raw voltage logs and plots are included in this directory.
-
-Further experiments will compare broadband vs cantilever resonance harvesting approaches.
+- Add accelerometer measurements for shaker amplitude / input acceleration
+- Add USB boost-converter demo results
+- Add normalized power estimates under load

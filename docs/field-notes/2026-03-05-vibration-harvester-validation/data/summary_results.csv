@@ -1,0 +1,12 @@
+dataset,peak_voltage_V,samples
+WaveHarvester 25Hz 2min,0.884029,71
+WaveHarvester 50Hz 2min,1.062124,62
+WaveHarvester 60Hz 2min,0.505275,76
+WaveHarvester 50Hz 6min,3.052601,169
+Cantilever test1 25Hz,0.095,29
+Cantilever test2 25Hz,0.221,76
+Double cantilever 2 25Hz,0.484,56
+Double cantilever 50Hz,0.008,36
+Double cantilever 60Hz,0.016,39
+Double cantilever 50Hz 6min,0.022564,130
+Double cantilever 25Hz 6min,0.246593,141
