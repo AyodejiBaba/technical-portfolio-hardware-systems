@@ -51,3 +51,18 @@ The experiments show a clear architecture trade-off:
 - Add accelerometer measurements for shaker amplitude / input acceleration
 - Add USB boost-converter demo results
 - Add normalized power estimates under load
+
+## Raw Measurement Data
+
+The full experimental dataset, including all test runs and intermediate calculations,
+is available in the Google Sheets workbook below.
+
+Google Sheets:
+https://docs.google.com/spreadsheets/d/PASTE_LINK_HERE
+
+The sheet contains multiple tabs for:
+
+- WaveHarvester tests (25 Hz, 50 Hz, 60 Hz)
+- Double cantilever tests
+- Long-duration accumulation tests
+- Plot preparation tables
