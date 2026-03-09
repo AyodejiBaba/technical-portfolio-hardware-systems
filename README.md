@@ -3,7 +3,7 @@
 
 Hardware engineer focused on **experimental validation, embedded systems, optical sensing, and energy harvesting R&D**, with a strong emphasis on measurement-driven debugging, hardware characterization, and system-level reliability.
 
-This repository presents representative engineering projects and validation work from areas including:
+This repository presents representative engineering projects demonstrating my work across:
 
 - hardware validation and characterization  
 - embedded systems and firmware testing  
@@ -12,9 +12,42 @@ This repository presents representative engineering projects and validation work
 - optical sensing systems  
 - vibration energy harvesting systems  
 
-Due to NDAs and company ownership, some projects are described at the **system architecture, validation, and test-strategy level** rather than with full schematics or proprietary source code.
+Due to NDAs and company ownership, some projects are documented at the **system architecture and validation methodology level** rather than including full schematics or proprietary source code.
 
 The goal of this portfolio is to demonstrate **how I approach real engineering problems** — designing experiments, collecting measurements, isolating root causes, and iterating hardware and firmware together.
+
+---
+
+# Representative Engineering Work
+
+Below are selected projects demonstrating my approach to **hardware validation, experimental engineering, and sensor system development.**
+
+### Laser Triangulation Sensor Validation
+Experimental validation of a **laser triangulation optical sensing system**, including optical alignment, calibration, signal characterization, and measurement accuracy testing.
+
+Documentation and slides:  
+[Laser Triangulation Sensor Validation](08_laser_triangulation_sensor_validation/)
+
+---
+
+### Vibration Energy Harvesting Experiments
+Experimental characterization of **broadband and piezoelectric vibration energy harvesting systems** using controlled shaker excitation and capacitor charge accumulation measurements.
+
+Project documentation:  
+[Energy Harvesting Prototyping](04_energy_harvesting_prototyping/)
+
+---
+
+### Hardware Debug & Root Cause Isolation
+Representative hardware debugging case studies demonstrating structured engineering approaches to:
+
+- power rail failures  
+- PCB assembly defects  
+- signal integrity issues  
+- board bring-up failures  
+
+Examples available here:  
+[Hardware Debug Case Studies](07_hardware_debug_case_studies/)
 
 ---
 
@@ -48,12 +81,12 @@ The goal of this portfolio is to demonstrate **how I approach real engineering p
 
 Each section documents real engineering scenarios including:
 
-- system architecture
-- debugging methodology
-- measurement instrumentation
-- experimental setup design
-- test results and observations
-- engineering conclusions
+- system architecture  
+- debugging methodology  
+- measurement instrumentation  
+- experimental setup design  
+- test results and observations  
+- engineering conclusions  
 
 ---
 
@@ -92,7 +125,7 @@ The experiment compares two different harvesting approaches:
 
 The objective of the tests was to evaluate how each architecture performs under controlled vibration excitation.
 
-## Example Test Parameters
+### Example Test Parameters
 
 - Frequencies tested: **25 Hz, 50 Hz, 60 Hz**
 - Storage capacitor: **470 µF**
@@ -146,5 +179,8 @@ I am happy to walk through any of these projects in more detail during **technic
 
 For additional background on my engineering work:
 
-- LinkedIn: https://linkedin.com/in/ayodejibabalola  
-- GitHub: https://github.com/AyodejiBaba
+LinkedIn  
+https://linkedin.com/in/ayodejibabalola  
+
+GitHub  
+https://github.com/AyodejiBaba
