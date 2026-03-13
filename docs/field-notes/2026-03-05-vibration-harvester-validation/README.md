@@ -94,3 +94,59 @@ The workbook includes:
 - Cantilever frequency tests
 - Long duration accumulation tests
 - Plot preparation tables
+
+---
+
+## USB Boost Stage Validation
+
+To verify that the harvested energy could be converted into a usable voltage rail, a small DC-DC boost converter module was added after the storage capacitor.
+
+### Test Configuration
+
+Vibration source: shaker excitation  
+Frequencies tested: 25 Hz, 50 Hz, 60 Hz  
+Storage capacitor: 470 µF  
+Load resistor: 22 kΩ across capacitor  
+Boost module: 0.9–5 V → 5 V step-up converter  
+USB output: standard female USB port
+
+### Procedure
+
+1. The capacitor was allowed to charge under vibration excitation.
+2. Once the capacitor voltage reached ~3 V, the boost converter was connected.
+3. The boost module output was measured on the USB VBUS and GND pins.
+
+### Result
+
+The boost converter successfully generated:
+VBUS ≈ 5.6 V
+
+This confirms the full energy chain:
+Mechanical vibration
+↓
+Energy harvesting element
+↓
+Rectification
+↓
+Capacitor energy storage
+↓
+DC-DC boost conversion
+↓
+USB-level voltage output
+
+
+While the available current from the prototype is still very low, this test validates the **power conversion architecture required for practical applications**.
+
+### Key Insight
+
+The experiment shows that vibration energy harvesting systems require **both energy accumulation and power management** stages.
+
+Voltage alone is not sufficient; usable output depends on the combination of:
+
+- harvested power
+- storage capacity
+- boost converter efficiency
+- load current demand
+
+This behaviour is consistent with typical ultra-low-power energy harvesting systems used in wireless sensor nodes and IoT devices.
+
