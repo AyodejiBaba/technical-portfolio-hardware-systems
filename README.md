@@ -1,14 +1,15 @@
 # Ayodeji Sunday Babalola  
 ## Hardware, Systems & Test Engineering Portfolio
 
-Hardware engineer focused on **experimental validation, embedded systems, optical sensing, and energy harvesting R&D**, with a strong emphasis on:
+Hardware engineer focused on **experimental validation, embedded systems, optical sensing, and energy harvesting R&D**, with strong emphasis on:
 
 - measurement-driven debugging  
 - hardware characterization  
 - system-level reliability  
 - sensor system validation  
+- experimental prototyping  
 
-This repository documents representative engineering work demonstrating how I approach **real hardware problems** — designing experiments, collecting measurements, isolating root causes, and iterating hardware and firmware together.
+This repository presents representative engineering projects demonstrating how I approach **real hardware problems** — designing experiments, collecting measurements, isolating root causes, and iterating hardware and firmware together.
 
 Some projects are documented at the **system architecture and validation methodology level** due to NDAs.
 
@@ -16,36 +17,39 @@ Some projects are documented at the **system architecture and validation methodo
 
 # Featured Engineering Work
 
-## 1. Laser Triangulation Sensor Validation
+## Laser Triangulation Sensor Validation
 
-Experimental validation of a **laser triangulation optical sensing system** including:
+Experimental validation of a **laser triangulation optical sensing system** used for displacement measurement.
 
-- optical alignment and calibration
-- sensor accuracy and repeatability characterization
-- signal linearity and noise analysis
-- calibration curve generation
-- experimental validation setup design
+The work includes:
+
+- optical alignment and calibration  
+- sensor accuracy and repeatability characterization  
+- signal linearity analysis  
+- noise characterization  
+- calibration curve generation  
+- experimental validation setup design  
 
 Project documentation:
 
 [Laser Triangulation Sensor Validation](08_laser_triangulation_sensor_validation/)
 
-Presentation slides:
+Presentation overview:
 
 [Laser Triangulation Sensor Development & Validation](08_laser_triangulation_sensor_validation/laser_triangulation_overview.pdf)
 
 ---
 
-## 2. Vibration Energy Harvesting Experiments
+## Vibration Energy Harvesting Experiments
 
-Experimental characterization of **broadband and piezoelectric vibration energy harvesting systems** using controlled shaker excitation and capacitor charge accumulation measurements.
+Experimental characterization of **broadband and piezoelectric vibration energy harvesting systems** using controlled shaker excitation.
 
-Two architectures were tested:
+Two harvesting approaches were evaluated:
 
 - **WaveHarvester broadband energy harvester**
 - **Double-cantilever piezoelectric harvesters**
 
-### Example Validation Result
+### Example Experimental Result
 
 | Architecture | Frequency | Test Duration | Peak Voltage |
 |---|---|---|---|
@@ -53,28 +57,33 @@ Two architectures were tested:
 | Double Cantilever | 25 Hz | 6 min | ~0.247 V |
 | Double Cantilever | 50 Hz | 6 min | ~0.022 V |
 
-These results demonstrate the trade-off between **broadband harvesting architectures and narrowband resonant harvesters**.
+These results demonstrate the performance difference between **broadband harvesting architectures** and **narrowband resonant harvesters**.
 
-Project documentation:
+![Peak voltage comparison](docs/field-notes/2026-03-05-vibration-harvester-validation/plots/peak_voltage_comparison.png)
+
+Full experiment documentation:
 
 [2026-03-05 Vibration Harvester Validation](docs/field-notes/2026-03-05-vibration-harvester-validation)
 
+Prototype development work:
+
+[Energy Harvesting Prototyping](04_energy_harvesting_prototyping/)
+
 ---
 
-## 3. Hardware Debug & Root Cause Isolation
+## Hardware Debug & Root Cause Isolation
 
 Representative debugging case studies demonstrating structured engineering approaches to diagnosing hardware failures.
 
-Examples include:
+Example problem domains include:
 
 - power rail failures  
 - PCB assembly defects  
 - signal integrity issues  
 - board bring-up failures  
+- measurement-driven fault isolation  
 
-These projects demonstrate systematic approaches to **fault isolation, measurement instrumentation, and root cause identification**.
-
-Examples available here:
+Case study examples:
 
 [Hardware Debug Case Studies](07_hardware_debug_case_studies/)
 
@@ -82,19 +91,19 @@ Examples available here:
 
 # Embedded Telemetry Firmware
 
-Energy harvesting experiments used an **ESP32 MicroPython telemetry system** for measurement logging.
+Energy harvesting experiments use an **ESP32-based telemetry system** for measurement logging and remote monitoring.
 
 Capabilities include:
 
-- ADC voltage sampling
-- CSV telemetry logging
-- optional ThingsBoard streaming
-- Wi-Fi failover
-- watchdog-based recovery for long-duration experiments
+- ADC voltage sampling  
+- CSV telemetry logging  
+- optional ThingsBoard telemetry streaming  
+- Wi-Fi failover  
+- watchdog recovery for long-duration experiments  
 
-Firmware repository folder:
+Firmware location:
+firmware/esp32-waveharvester/
 
-`firmware/esp32-waveharvester/`
 
 ---
 
@@ -107,7 +116,7 @@ Firmware repository folder:
 - Experimental hardware prototyping  
 - Energy harvesting systems and sensor platforms  
 - Test process design and validation strategy  
-- Test automation using Python  
+- Python-based test automation  
 - Data-driven engineering and measurement analysis  
 - Cross-functional systems engineering  
 
@@ -116,7 +125,7 @@ Firmware repository folder:
 # Project Index
 
 | Section | Project |
-|-------|-------|
+|------|------|
 | 01 | [Post-Silicon Validation of MEMS Timing Devices](01_post_silicon_validation/) |
 | 02 | [Electronics & PCB Validation for Embedded Systems](02_electronics_pcb_validation/) |
 | 03 | [Firmware & Low-Level Software Testing](03_firmware_low_level_testing/) |
@@ -129,17 +138,61 @@ Firmware repository folder:
 ---
 
 # Repository Structure
-
-```text
+```
 technical-portfolio-hardware-systems/
-├── docs/
-│   └── field-notes/
-│       └── experimental hardware validation notes
-├── firmware/
-│   └── esp32-waveharvester/
-│       └── MicroPython telemetry firmware
-├── data/
-│   └── processed experimental datasets
-├── plots/
-│   └── experiment visualizations
+│
+├── 01_post_silicon_validation
+├── 02_electronics_pcb_validation
+├── 03_firmware_low_level_testing
+├── 04_energy_harvesting_prototyping
+├── 05_test_process_design
+├── 06_cross_functional_engineering
+├── 07_hardware_debug_case_studies
+├── 08_laser_triangulation_sensor_validation
+│
+├── docs
+│ └── field-notes
+│
+├── firmware
+│ └── esp32-waveharvester
+│
 └── README.md
+```
+
+
+Projects typically include:
+
+- system architecture documentation  
+- debugging methodology  
+- experimental setup design  
+- measurement instrumentation  
+- test results and observations  
+- engineering conclusions  
+
+---
+
+# Engineering Approach
+
+My work emphasizes **measurement-driven engineering**.
+
+Rather than relying purely on theoretical models, I prioritize:
+
+- designing controlled experiments  
+- instrumenting systems to capture real electrical and mechanical behavior  
+- analyzing measurement data  
+- isolating root causes through structured debugging  
+- iterating both hardware and firmware designs  
+
+The documentation in this repository is structured similarly to **internal validation reports used in hardware R&D environments.**
+
+---
+
+# Contact
+
+I am happy to walk through any of these projects during **technical interviews or engineering discussions**.
+
+LinkedIn  
+https://linkedin.com/in/ayodejibabalola  
+
+GitHub  
+https://github.com/AyodejiBaba
