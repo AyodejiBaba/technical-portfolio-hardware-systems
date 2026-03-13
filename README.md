@@ -1,71 +1,104 @@
 # Ayodeji Sunday Babalola  
 ## Hardware, Systems & Test Engineering Portfolio
 
-Hardware engineer focused on **experimental validation, embedded systems, optical sensing, and energy harvesting R&D**, with a strong emphasis on measurement-driven debugging, hardware characterization, and system-level reliability.
+Hardware engineer focused on **experimental validation, embedded systems, optical sensing, and energy harvesting R&D**, with a strong emphasis on:
 
-This repository presents representative engineering projects demonstrating my work across:
+- measurement-driven debugging  
+- hardware characterization  
+- system-level reliability  
+- sensor system validation  
 
-- hardware validation and characterization  
-- embedded systems and firmware testing  
-- electronics bring-up and PCB fault isolation  
-- experimental prototyping and applied R&D  
-- optical sensing systems  
-- vibration energy harvesting systems  
+This repository documents representative engineering work demonstrating how I approach **real hardware problems** — designing experiments, collecting measurements, isolating root causes, and iterating hardware and firmware together.
 
-Due to NDAs and company ownership, some projects are documented at the **system architecture and validation methodology level** rather than including full schematics or proprietary source code.
-
-The goal of this portfolio is to demonstrate **how I approach real engineering problems** — designing experiments, collecting measurements, isolating root causes, and iterating hardware and firmware together.
+Some projects are documented at the **system architecture and validation methodology level** due to NDAs.
 
 ---
 
-# Representative Engineering Work
+# Featured Engineering Work
 
-Below are selected projects demonstrating my approach to **hardware validation, experimental engineering, and sensor system development.**
+## 1. Laser Triangulation Sensor Validation
 
-### Laser Triangulation Sensor Validation
-Experimental validation of a **laser triangulation optical sensing system**, including optical alignment, calibration, signal characterization, and measurement accuracy testing.
+Experimental validation of a **laser triangulation optical sensing system** including:
 
-Documentation and slides:  
+- optical alignment and calibration
+- sensor accuracy and repeatability characterization
+- signal linearity and noise analysis
+- calibration curve generation
+- experimental validation setup design
+
+Project documentation:
+
 [Laser Triangulation Sensor Validation](08_laser_triangulation_sensor_validation/)
 
+Presentation slides:
+
+[Laser Triangulation Sensor Development & Validation](08_laser_triangulation_sensor_validation/laser_triangulation_overview.pdf)
+
 ---
 
-### Vibration Energy Harvesting Experiments
+## 2. Vibration Energy Harvesting Experiments
+
 Experimental characterization of **broadband and piezoelectric vibration energy harvesting systems** using controlled shaker excitation and capacitor charge accumulation measurements.
 
-## Featured Projects
+Two architectures were tested:
 
-### 1. Vibration Energy Harvester Validation
-Controlled shaker-based validation of broadband and resonant vibration harvesting architectures, including capacitor charging behaviour, comparative plots, and USB boost-stage feasibility.
+- **WaveHarvester broadband energy harvester**
+- **Double-cantilever piezoelectric harvesters**
 
-Project folder:
-`docs/field-notes/2026-03-05-vibration-harvester-validation/`
+### Example Validation Result
 
-### 2. ESP32 Telemetry Firmware for Harvester Experiments
-MicroPython-based embedded firmware for ADC sampling, CSV logging, optional ThingsBoard telemetry streaming, and watchdog-based recovery during long-duration vibration tests.
+| Architecture | Frequency | Test Duration | Peak Voltage |
+|---|---|---|---|
+| WaveHarvester | 50 Hz | 6 min | ~3.05 V |
+| Double Cantilever | 25 Hz | 6 min | ~0.247 V |
+| Double Cantilever | 50 Hz | 6 min | ~0.022 V |
 
-Firmware folder:
-`firmware/esp32-waveharvester/`
+These results demonstrate the trade-off between **broadband harvesting architectures and narrowband resonant harvesters**.
 
-Project documentation:  
-[Energy Harvesting Prototyping](04_energy_harvesting_prototyping/)
+Project documentation:
+
+[2026-03-05 Vibration Harvester Validation](docs/field-notes/2026-03-05-vibration-harvester-validation)
 
 ---
 
-### Hardware Debug & Root Cause Isolation
-Representative hardware debugging case studies demonstrating structured engineering approaches to:
+## 3. Hardware Debug & Root Cause Isolation
+
+Representative debugging case studies demonstrating structured engineering approaches to diagnosing hardware failures.
+
+Examples include:
 
 - power rail failures  
 - PCB assembly defects  
 - signal integrity issues  
 - board bring-up failures  
 
-Examples available here:  
+These projects demonstrate systematic approaches to **fault isolation, measurement instrumentation, and root cause identification**.
+
+Examples available here:
+
 [Hardware Debug Case Studies](07_hardware_debug_case_studies/)
 
 ---
 
-# Core Expertise
+# Embedded Telemetry Firmware
+
+Energy harvesting experiments used an **ESP32 MicroPython telemetry system** for measurement logging.
+
+Capabilities include:
+
+- ADC voltage sampling
+- CSV telemetry logging
+- optional ThingsBoard streaming
+- Wi-Fi failover
+- watchdog-based recovery for long-duration experiments
+
+Firmware repository folder:
+
+`firmware/esp32-waveharvester/`
+
+---
+
+# Core Engineering Expertise
 
 - Post-silicon validation and characterization  
 - Electronics bring-up and PCB fault isolation  
@@ -93,8 +126,11 @@ Examples available here:
 | 07 | [Hardware Debug Case Studies](07_hardware_debug_case_studies/) |
 | 08 | [Laser Triangulation Sensor Validation](08_laser_triangulation_sensor_validation/) |
 
-## Repository Structure
+---
 
+# Repository Structure
+
+```text
 technical-portfolio-hardware-systems/
 ├── docs/
 │   └── field-notes/
@@ -103,113 +139,7 @@ technical-portfolio-hardware-systems/
 │   └── esp32-waveharvester/
 │       └── MicroPython telemetry firmware
 ├── data/
-│   └── processed and summary datasets
+│   └── processed experimental datasets
 ├── plots/
-│   └── generated visualizations
+│   └── experiment visualizations
 └── README.md
-
-Each section documents real engineering scenarios including:
-
-- system architecture  
-- debugging methodology  
-- measurement instrumentation  
-- experimental setup design  
-- test results and observations  
-- engineering conclusions  
-
----
-
-# Optical Sensor Validation (Laser Triangulation)
-
-This section documents experimental validation work on **laser triangulation sensing systems**.
-
-Laser triangulation sensors measure displacement by projecting a laser beam onto a target surface and detecting the reflected spot position on a **position-sensitive detector (PSD)**.
-
-The work documented includes:
-
-- optical alignment and calibration procedures  
-- sensor accuracy and repeatability characterization  
-- signal linearity and noise analysis  
-- calibration curve generation  
-- experimental validation setup design  
-
-Presentation describing the sensing system and validation work:
-
-[Laser Triangulation Sensor Development & Validation](08_laser_triangulation_sensor_validation/laser_triangulation_overview.pdf)
-
-Full project documentation:
-
-[Laser Triangulation Sensor Validation Project](08_laser_triangulation_sensor_validation/)
-
----
-
-# Hardware Energy Harvesting Experiments
-
-Recent experimental validation of **vibration energy harvesting architectures** using a controlled shaker setup.
-
-The experiment compares two different harvesting approaches:
-
-- **WaveHarvester broadband energy harvester**
-- **Double-cantilever piezoelectric harvesters**
-
-The objective of the tests was to evaluate how each architecture performs under controlled vibration excitation.
-
-### Example Test Parameters
-
-- Frequencies tested: **25 Hz, 50 Hz, 60 Hz**
-- Storage capacitor: **470 µF**
-- Load resistor: **22 kΩ**
-- Excitation source: vibration shaker
-- Mounting method: rigid cyanoacrylate coupling
-
-During a long-duration accumulation test, the broadband harvester reached approximately:
-
-**~3.05 V across a 470 µF capacitor after a 6-minute run at ~50 Hz excitation.**
-
-This behavior indicates that the device is well matched to vibration frequencies commonly found in industrial environments.
-
----
-
-# Experiment Documentation
-
-Detailed field notes, measurement logs, and experimental analysis are available here:
-
-[2026-03-05 Vibration Harvester Validation](docs/field-notes/2026-03-05-vibration-harvester-validation)
-
-The documentation includes:
-
-- experimental setup diagrams  
-- raw measurement logs  
-- charging curves and comparison plots  
-- engineering observations  
-- interpretation of system behavior  
-
----
-
-# Engineering Approach
-
-My work emphasizes **measurement-driven engineering**.
-
-Rather than relying purely on theoretical models, I prioritize:
-
-- designing controlled experiments  
-- instrumenting systems to capture real electrical and mechanical behavior  
-- analyzing measurement data  
-- isolating root causes through structured debugging  
-- iterating both hardware and firmware designs  
-
-The projects in this repository are documented as **engineering field notes**, similar to internal validation reports used in hardware R&D environments.
-
----
-
-# Notes
-
-I am happy to walk through any of these projects in more detail during **technical interviews or engineering discussions**.
-
-For additional background on my engineering work:
-
-LinkedIn  
-https://linkedin.com/in/ayodejibabalola  
-
-GitHub  
-https://github.com/AyodejiBaba
