@@ -33,6 +33,20 @@ Documentation and slides:
 ### Vibration Energy Harvesting Experiments
 Experimental characterization of **broadband and piezoelectric vibration energy harvesting systems** using controlled shaker excitation and capacitor charge accumulation measurements.
 
+## Featured Projects
+
+### 1. Vibration Energy Harvester Validation
+Controlled shaker-based validation of broadband and resonant vibration harvesting architectures, including capacitor charging behaviour, comparative plots, and USB boost-stage feasibility.
+
+Project folder:
+`docs/field-notes/2026-03-05-vibration-harvester-validation/`
+
+### 2. ESP32 Telemetry Firmware for Harvester Experiments
+MicroPython-based embedded firmware for ADC sampling, CSV logging, optional ThingsBoard telemetry streaming, and watchdog-based recovery during long-duration vibration tests.
+
+Firmware folder:
+`firmware/esp32-waveharvester/`
+
 Project documentation:  
 [Energy Harvesting Prototyping](04_energy_harvesting_prototyping/)
 
@@ -78,6 +92,21 @@ Examples available here:
 | 06 | [Cross-Functional Systems Engineering & Delivery](06_cross_functional_engineering/) |
 | 07 | [Hardware Debug Case Studies](07_hardware_debug_case_studies/) |
 | 08 | [Laser Triangulation Sensor Validation](08_laser_triangulation_sensor_validation/) |
+
+## Repository Structure
+
+technical-portfolio-hardware-systems/
+├── docs/
+│   └── field-notes/
+│       └── experimental hardware validation notes
+├── firmware/
+│   └── esp32-waveharvester/
+│       └── MicroPython telemetry firmware
+├── data/
+│   └── processed and summary datasets
+├── plots/
+│   └── generated visualizations
+└── README.md
 
 Each section documents real engineering scenarios including:
 
