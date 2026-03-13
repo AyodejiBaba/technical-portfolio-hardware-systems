@@ -9,15 +9,33 @@ Hardware engineer focused on **experimental validation, embedded systems, optica
 - sensor system validation  
 - experimental prototyping  
 
-This repository presents representative engineering projects demonstrating how I approach **real hardware problems** — designing experiments, collecting measurements, isolating root causes, and iterating hardware and firmware together.
+This repository documents selected hardware engineering projects covering **validation engineering, sensing systems, experimental prototyping, and embedded telemetry systems**.
+
+The projects demonstrate how I approach **real engineering problems** — designing controlled experiments, collecting measurements, isolating root causes, and iterating hardware and firmware together.
 
 Some projects are documented at the **system architecture and validation methodology level** due to NDAs.
 
 ---
 
-# Featured Engineering Work
+# Featured Engineering Projects
 
-## Laser Triangulation Sensor Validation
+Quick navigation to key work in this portfolio:
+
+🔬 **Laser Sensor Validation**  
+[Laser Triangulation Sensor Validation](08_laser_triangulation_sensor_validation/)
+
+⚡ **Vibration Energy Harvesting Experiments**  
+[Energy Harvesting Prototyping](04_energy_harvesting_prototyping/)  
+
+📊 **Experimental Validation Field Notes**  
+[2026-03-05 Vibration Harvester Validation](docs/field-notes/2026-03-05-vibration-harvester-validation)
+
+🛠 **Hardware Debug Case Studies**  
+[Hardware Debug Case Studies](07_hardware_debug_case_studies/)
+
+---
+
+# Laser Triangulation Sensor Validation
 
 Experimental validation of a **laser triangulation optical sensing system** used for displacement measurement.
 
@@ -40,7 +58,7 @@ Presentation overview:
 
 ---
 
-## Vibration Energy Harvesting Experiments
+# Vibration Energy Harvesting Experiments
 
 Experimental characterization of **broadband and piezoelectric vibration energy harvesting systems** using controlled shaker excitation.
 
@@ -57,11 +75,11 @@ Two harvesting approaches were evaluated:
 | Double Cantilever | 25 Hz | 6 min | ~0.247 V |
 | Double Cantilever | 50 Hz | 6 min | ~0.022 V |
 
-These results demonstrate the performance difference between **broadband harvesting architectures** and **narrowband resonant harvesters**.
+These results demonstrate the difference between **broadband harvesting architectures** and **narrowband resonant harvesters**.
 
 ![Peak voltage comparison](docs/field-notes/2026-03-05-vibration-harvester-validation/plots/peak_voltage_comparison.png)
 
-Full experiment documentation:
+Full experimental documentation:
 
 [2026-03-05 Vibration Harvester Validation](docs/field-notes/2026-03-05-vibration-harvester-validation)
 
@@ -71,11 +89,11 @@ Prototype development work:
 
 ---
 
-## Hardware Debug & Root Cause Isolation
+# Hardware Debug & Root Cause Isolation
 
 Representative debugging case studies demonstrating structured engineering approaches to diagnosing hardware failures.
 
-Example problem domains include:
+Example debugging domains include:
 
 - power rail failures  
 - PCB assembly defects  
@@ -83,7 +101,7 @@ Example problem domains include:
 - board bring-up failures  
 - measurement-driven fault isolation  
 
-Case study examples:
+Case studies:
 
 [Hardware Debug Case Studies](07_hardware_debug_case_studies/)
 
@@ -98,12 +116,19 @@ Capabilities include:
 - ADC voltage sampling  
 - CSV telemetry logging  
 - optional ThingsBoard telemetry streaming  
-- Wi-Fi failover  
+- Wi-Fi reconnection and failover  
 - watchdog recovery for long-duration experiments  
 
 Firmware location:
 firmware/esp32-waveharvester/
 
+
+Typical firmware components include:
+
+- `boot.py`
+- `main.py`
+- telemetry logging scripts
+- ADC sampling routines
 
 ---
 
@@ -183,7 +208,7 @@ Rather than relying purely on theoretical models, I prioritize:
 - isolating root causes through structured debugging  
 - iterating both hardware and firmware designs  
 
-The documentation in this repository is structured similarly to **internal validation reports used in hardware R&D environments.**
+The documentation in this repository is structured similarly to **internal validation reports used in hardware R&D environments**.
 
 ---
 
